@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"pylint.interpreter": [
+			"${workspaceFolder}/.venv/Scripts/python"
+		],
+		"editor.rulers": [80]
+	},
+	"extensions": {
+		"recommendations": [
+			"ryanluker.vscode-coverage-gutters"
+		]
+	}
+}

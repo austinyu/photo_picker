@@ -1,0 +1,42 @@
+[project]
+name = "photo-picker"
+description = "TODO"
+authors = [
+    {name = "Sir Austin",email = "yuxm.austin2016@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+dynamic = ["version"]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry]
+version = "0.0.0"
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov photo_picker",
+    "--cov-report xml:tests/.coverage/cov.xml",
+    "--cov-report html:tests/.coverage/html"
+]
+
+
+
+[tool.poetry-dynamic-versioning]
+enable = true
