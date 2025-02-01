@@ -1,0 +1,32 @@
+[project]
+name = "photo-picker"
+version = "0.1.0"  # This will be overridden by poetry-dynamic-versioning
+description = "TODO"
+authors = [
+    {name = "Sir Austin",email = "yuxm.austin2016@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+
+
+[tool.pytest.ini_options]
+addopts = "--cov photo_picker --cov-report xml:tests/.coverage/cov.xml --cov-report html:tests/.coverage/html"
+
+[tool.poetry-dynamic-versioning]
+enable = true
